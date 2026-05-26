@@ -64,3 +64,33 @@ print("Sum of even numbers:", result)
 #### Advice
 * This solution has a time complexity of O(n), where n is the number of elements in the list.
 * It is suitable for large lists because it only requires a single pass through the data.
+
+### Brandon First Code Challenge
+#### Problem Statement
+Create a function that takes a string as input and returns the string with all vowels removed.
+
+#### Solution
+```python
+def remove_vowels(input_string):
+    """
+    Removes all vowels from the input string.
+
+    Args:
+        input_string (str): The input string.
+
+    Returns:
+        str: The input string with all vowels removed.
+    """
+    vowels = 'aeiouAEIOU'
+    return ''.join([char for char in input_string if char not in vowels])
+
+# Example usage
+input_str = "Hello World"
+print(remove_vowels(input_str))  # Outputs: "Hll Wrld"
+```
+
+#### Explanation
+* The function `remove_vowels` takes an input string and uses a list comprehension to iterate over each character.
+* It checks if each character is not in the string of vowels.
+* The `join` method is then used to concatenate all the characters that are not vowels into a single string.
+* The result is returned by the function.
