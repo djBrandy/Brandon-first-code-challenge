@@ -94,3 +94,41 @@ print(remove_vowels(input_str))  # Outputs: "Hll Wrld"
 * It checks if each character is not in the string of vowels.
 * The `join` method is then used to concatenate all the characters that are not vowels into a single string.
 * The result is returned by the function.
+
+### Brandon's First Code Challenge
+#### Problem Statement
+Create a function to calculate the total cost of items in a shopping cart.
+
+#### Solution
+```python
+def calculate_total_cost(cart):
+    """
+    Calculate the total cost of items in a shopping cart.
+
+    Args:
+        cart (list): A list of dictionaries, each containing 'price' and 'quantity' keys.
+
+    Returns:
+        float: The total cost of items in the shopping cart.
+    """
+    total_cost = 0
+    for item in cart:
+        total_cost += item['price'] * item['quantity']
+    return total_cost
+
+# Example usage:
+cart = [
+    {'price': 10.99, 'quantity': 2},
+    {'price': 5.49, 'quantity': 3},
+    {'price': 7.99, 'quantity': 1}
+]
+
+total_cost = calculate_total_cost(cart)
+print(f'Total cost: ${total_cost:.2f}')
+```
+
+#### Explanation
+* The `calculate_total_cost` function takes a list of dictionaries as input, where each dictionary represents an item in the shopping cart.
+* The function iterates over each item in the cart, calculates the total cost of the item by multiplying its price and quantity, and adds it to the total cost.
+* The function returns the total cost of all items in the shopping cart.
+* The example usage demonstrates how to call the function with a sample shopping cart and print the total cost.
