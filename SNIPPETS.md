@@ -132,3 +132,32 @@ print(f'Total cost: ${total_cost:.2f}')
 * The function iterates over each item in the cart, calculates the total cost of the item by multiplying its price and quantity, and adds it to the total cost.
 * The function returns the total cost of all items in the shopping cart.
 * The example usage demonstrates how to call the function with a sample shopping cart and print the total cost.
+
+### Brandon's First Code Challenge
+#### Problem Statement
+Create a function that takes a string as input and returns the string with all vowels removed.
+
+#### Solution
+```python
+def remove_vowels(input_string):
+    """
+    Removes all vowels from the input string.
+
+    Args:
+        input_string (str): The input string.
+
+    Returns:
+        str: The input string with all vowels removed.
+    """
+    vowels = 'aeiouAEIOU'
+    return ''.join([char for char in input_string if char not in vowels])
+
+# Example usage:
+print(remove_vowels("Hello World"))  # Output: "Hll Wrld"
+```
+
+#### Explanation
+* The function `remove_vowels` takes an input string and uses a list comprehension to iterate over each character.
+* It checks if the character is not in the string of vowels using the `not in` operator.
+* The `join` method is used to concatenate the characters that are not vowels into a single string.
+* The function returns the resulting string with all vowels removed.
